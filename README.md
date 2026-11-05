@@ -13,10 +13,10 @@ python scripts/analyze_solver_benchmark.py
 ```
 
 The profile creates a small Python environment and a small science environment
-(`python=3.13 numpy pandas scipy matplotlib`) from `defaults`. It runs three
+(`python=3.13 numpy pandas scipy matplotlib`) from `conda-forge`. It runs three
 repetitions per scenario, alternating solver order. Each repetition performs
 one cold create, one warm create, and one warm dry-run per solver. The runner
 isolates the conda package and repodata caches under
-`/tmp/perfpy-conda-solver-bench`. The profile disables sharded repodata so both
-solvers read the same repodata. The benchmark writes `data/solver_comparison.csv`;
-the analysis writes `data/solver_comparison_summary.csv`.
+`/tmp/perfpy-conda-solver-bench`. 
+The benchmark writes `data/solver_comparison.csv`; the analysis writes
+`data/solver_comparison_summary.csv`.
